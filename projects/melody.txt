@@ -1,0 +1,94 @@
+// Yilin
+// #1334903
+// Section BK
+// HW #2
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+
+// this class allows users to get the length of a song,
+// a String contains info of each note,
+// change the song's tempo, reverse the song, add two songs together
+// and play the song                                             '
+public class Melody {
+   private Queue<Note> song;
+   private double length;
+   
+   public Melody(Queue<Note> song) {
+      this.song = song;
+      for (int i = 0; i < this.song.size(); i++) {
+         length += this.song.peek().getDuration(); 
+         this.song.add(this.song.remove());
+      }
+   }
+   
+   // return how many seconds is this song
+   public double getLength() {
+      return this.length;
+   }
+   
+   // return info of each note in a String
+   public String toString() {
+      String txt = "";
+      for (int i = 0; i < this.song.size(); i++) {
+         txt += this.song.peek().toString() + "\n";
+         this.song.add(this.song.remove());
+      }
+      return txt;
+   }
+   
+   // change the tempo of each note by multiplying the duration 
+   // with double passed in parameter
+   public void changeTempo(double tempo) {
+      for (int i = 0; i < this.song.size(); i++) {
+         this.song.peek().setDuration(this.song.peek().getDuration() * tempo);
+         this.song.add(this.song.remove());
+      }
+      this.length = this.length * tempo;
+   }
+   
+   // reverse the song's order
+   public void reverse() {
+      Stack<Note> reverse = new Stack<Note> ();
+      while (!this.song.isEmpty()) {
+         reverse.push(this.song.remove());
+      }
+      while (!reverse.isEmpty()) {
+         this.song.add(reverse.pop());
+      }
+   }
+   
+   // add another song passed in parameter to 
+   // the end of the original song
+   public void append(Melody other) {
+      for(int i = 0; i < other.song.size(); i++) {
+         this.song.add(other.song.peek());
+         other.song.add(other.song.remove());
+      }
+   }
+   
+   // call each note's play method to play the song
+   public void play() {
+      Queue<Note> repeat = new LinkedList<Note> ();
+      boolean check = false;
+      for (int i = 0; i < this.song.size(); i++) {
+         Note note = this.song.remove();
+         note.play();
+         if (note.isRepeat()) {
+            check = !check;
+            if (check == false) {
+               repeat.add(note);
+               while (!repeat.isEmpty()) {
+                  repeat.remove().play();
+               }
+            }
+         }
+        if (check == true) {
+            repeat.add(note);
+         }
+         this.song.add(note);
+      }
+   }
+}
