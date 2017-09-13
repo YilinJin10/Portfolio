@@ -696,3 +696,18 @@ footer .social-icon
     
 }
 /* end templatemo 360 media quires */
+
+dd {
+    padding-bottom: 30px;
+}
+
+#experience-right {
+    padding-left: 80px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+#newsletter a {
+    color: white;
+    text-decoration: underline;
+}
