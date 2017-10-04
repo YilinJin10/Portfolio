@@ -90,6 +90,10 @@ p
     }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus { background-color: transparent }
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
 /* end navigation */
 
 /* start home */        
@@ -710,4 +714,32 @@ dd {
 #newsletter a {
     color: white;
     text-decoration: underline;
+}
+
+#home button {
+    width: 150px;
+    height: 50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: none;
+    font-size: 20px;
+    color: black;
+}
+
+#resume {
+    margin-top: 120px;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#resume a {
+    color: white;
+}
+
+video {
+    margin-left: auto;
+    margin-right: auto;
 }
