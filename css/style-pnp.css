@@ -1,0 +1,193 @@
+/*
+
+Template 2081 Solution
+
+http://www.tooplate.com/view/2081-solution
+
+*/
+
+body
+    {
+        background: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        position: relative;
+    }
+
+#experience-right {
+        margin-left: 100px;
+}
+
+#slide {
+        opacity: .7;
+}
+
+.caption {
+        font-weight: normal;
+        font-size: 26px;
+        text-transform: none;
+}
+
+h1, h2, h3, h4
+    {
+        font-weight: bold;
+    }
+
+h2 {
+    padding-left: 100px;
+}
+
+p
+    {
+        line-height: 26px;
+    }
+
+/* start all section */
+#service, #divider, #about, #team, #newsletter,
+ #pricing, #portfolio, #client, #contact
+    {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        position: relative;
+    }
+/* end all section */
+
+/* start nagivation */
+.navbar-default
+    {
+        background: #fff;
+        border: none;
+        box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+        margin: 0 !important;
+        padding: 0;
+    }
+
+.navbar-default h1 {
+    margin-right: 30px;
+    padding-left: 0px;
+}
+
+.navbar-default .navbar-brand
+    {
+        padding-top: 4px;
+        padding-bottom: 10px;
+    }
+.navbar-default .navbar-nav li a
+    {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 50px;
+        color: gray;
+    }
+
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: transparent }
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+/* end navigation */
+
+/* start overview*/        
+#overview
+    {
+      padding-top: 50px;
+      background-color: #f0f1f1;
+    }
+#overview img {
+    margin-top: 50px;
+    height: 65%;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+#overview h2 {
+    margin-top: 50px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#overview dt{
+    font-weight: normal;
+}
+
+#overview li {
+    font-weight: bold;
+}
+
+#overview .container {
+    margin-left: 100px;
+    margin-right: 50px;
+    height: 800px;
+}
+
+#right {
+    padding-left: 80px;
+}
+/*end overview*/
+
+/*start interview*/
+#interview {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+#interview img {
+    width: 100%;
+    border: gray solid 1px;
+    margin-top: 20px;
+}
+
+/*end interview*/
+
+
+/*start userflow*/
+#userflow h1 {
+    padding-left: 50px;
+}
+
+#userflow img {
+    width: 70%;
+    margin-left: 200px;
+}
+
+/*end userflow*/
+
+/*start prototype*/
+#prototype {
+    padding-top: 30px;
+    background-color: #f0f1f1; 
+    padding-bottom: 50px;
+}
+
+#prototype .container {
+    padding-left: 50px;
+}
+
+#prototype img {
+    width: 100%;
+    border: solid gray 1px;
+    margin-top: 20px;
+}
+/*end prototype*/
+
+/*start test*/
+#test {
+    padding-top: 30px;
+    background-color: #f0f1f1; 
+    padding-bottom: 50px;
+}
+
+#test .container {
+    padding-left: 50px;
+}
+
+#test img {
+    width: 100%;
+    border: solid gray 1px;
+    margin-top: 20px;
+}
+/*end test*/
